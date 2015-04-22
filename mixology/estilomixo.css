@@ -1,0 +1,623 @@
+body{
+	background-image: url(image/fondo.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	/*-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;*/
+	
+}
+
+/*--------------------------------------------------------------------------------*/
+
+header{
+	background-image: url(image/logomixo.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*width: 70%; si le doy la medida no me centra segun el margin--*/
+	height: 350px;
+	margin-top:2%;
+	margin-right:4.5%;
+	margin-bottom:0%;
+	margin-left:4.5%;
+	position:relative;
+}
+
+nav{
+	background:rgba(255,255,255,.5);
+	width:100%;
+	height:12%;
+	position:absolute;
+	bottom:0%; /*lo ubicamos en parte inferior del header*/
+	
+}  
+
+	#nav,#nav ul {
+		font-family:verdana;
+		list-style:none;
+		margin:0;
+		padding:0;
+		position:absolute;
+	}
+
+	#nav {
+		height:100%;
+		left:50%;
+		overflow:hidden;
+		top:0;
+	}
+
+	#nav li {
+		float:left;
+		position:relative;
+		z-index:10;
+	}
+
+	#nav li a {
+		background: no-repeat center top;
+		background-image: url(image/banner.png);
+		color:white; /*---color letras*/
+		display:block;
+		float:left;
+		font-size:14px;
+		height:100%;
+		line-height:40px;
+		padding:0 10px;
+		position:relative;
+		text-decoration:none;
+		z-index:20;
+	}
+
+	#nav li:first-child a {
+		background:url(image/banner.png) no-repeat left top;
+		padding-left:40px;
+		
+	}
+
+	#nav li ul li:first-child a {
+		background-image:none;
+		padding-left:10px;
+	}
+
+	#nav li.pad {
+		background:url(image/banner.png) no-repeat right top;
+		display:block;
+		height:51px;
+		width:45px;
+	}
+
+	#nav ul {
+		background:#663399; /*el color de las ventanass que salen*/
+		height:58px; /*Puede ir AUTO para que se controle segun el contenido*/
+ 		padding:10px 0;
+		position:absolute;
+		top:-115px;
+		width:180px;
+		z-index:1;
+	 
+	 	border-radius:8px; /*some css3*/
+	 	-moz-border-radius:8px;
+	 	-webkit-border-radius:8px;
+	 	transition:0.8s ease-in-out;
+	 	box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	 	-moz-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	 	-webkit-box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	 	-moz-transition:0.8s ease-in-out;
+	 	-o-transition:0.8s ease-in-out;
+	 	-webkit-transition:all 0.8s ease-in-out;
+	}
+
+	#nav ul li { /*el largo de los submenus*/
+		width:180px;
+	}
+
+	#nav ul li a { /*el ancho de los submenus*/
+		background:transparent;
+		height:20px;
+		line-height:20px;
+		width:160px;
+	}
+
+	#nav:hover {  /*la distancia hasta donde puede salir*/
+		height:200px;
+	}
+
+	#nav li:hover ul {
+	 	-moz-transform:translate(0,161px); /*some css3*/
+	 	-o-transform:translate(0,161px);
+	 	-webkit-transform:translate(0,161px);
+	 	transform: translate(0,161px);
+	}
+
+	#nav a:hover,#nav li:hover > a {
+		color:#3399cc;  /*el color de la letra cuando paso sobre el*/
+	}
+
+/*--------------------------------------------------------------------*/
+section{
+	/*background-image:url(image/fondosection.jpg);*/
+	background:rgba(255,255,255,.2);
+	background-position: center;
+	background-size: 100% 100%;
+	width: 65%;
+	height: 800px;
+	margin-top: 1%;
+	margin-left:4.5%;
+	margin-bottom:2%;
+	/*margin: 0% 3.8% 0% 3.8%;*/
+	position: absolute;
+}
+
+.conocenos{
+	background: #ffffff;
+	opacity:0.7;
+	padding:7%;
+	padding-bottom: 14%;
+	margin-top:2.5%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	text-align: justify;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	/*width:80%;  --tambien lo quito para que el section pueda estar en el medio*/
+	height:60%;
+	position: relative;
+	border: 3px solid #006799;
+	border-radius: 7px;
+	overflow:hidden; /* ya no es necesario porque tengo controlado bien el contenido al 100%*/
+}
+	
+.curricula{
+	background:#ffffff;
+	opacity:0.5;
+	border: 3px solid #006799;
+	width:80%;
+	height:45%;
+	padding:5%;
+	margin:5%;
+	text-align: justify;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height:2;
+}
+
+.servicios{
+	background:#ffffff;
+	opacity:0.9;
+	border: 3px solid #006799;
+	width:80%;
+	height:65%;
+	padding:5%;
+	margin:5%;
+	text-align: justify;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height:2;
+}
+
+.curricula ul { 
+	list-style: url("image/vineta.png") square;
+}
+
+.primera{
+	position: absolute;
+	margin: 0% 0%;
+
+}
+
+.segunda{
+	position: absolute;
+	margin-top:0%;
+	margin-left: 40%;
+
+}
+
+
+.cartelera{
+	padding:1.1%;
+	margin-top:2.5%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	text-align: center;
+	/*width:80%;  --tambien lo quito para que el section pueda estar en el medio*/
+	height:35%;
+	position: relative;
+	border: 3px solid #006799;
+	border-radius: 7px;
+	overflow:hidden; /* ya no es necesario porque tengo controlado bien el contenido al 100%*/
+}
+
+.cartelera .img_cartelera{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+.cartelera .fantasma{
+	color:white;
+	/*background:black;*/
+	background:rgba(0,0,0,.8);
+	/*border: 3px solid #990067;*/
+	width:50%;
+	height:94%;
+	top:3%;
+	right:1.2%;
+	position:absolute;
+}
+
+#titulo{
+	background:rgba(0,0,10,250);
+	color:#999999;
+	width:75%;
+	/*height:13%;*/
+	font-size:140%;
+	font-weight:900;
+	padding-top:1%;
+	padding-left:9%;
+	padding-bottom:1%;
+}	
+
+#titulos_sabores{
+	font-size:200%;
+	font-weight:900; /*bold*/
+	padding-left:9%;
+	margin-top:-2%;
+}
+
+#texto_sabores{
+	font-size:109%;
+	padding-left:9%;
+	margin-top:-3%;
+}
+
+#seguir{
+	font-size:109%;
+	font-weight:700; /*bold*/
+	padding-left:60%;
+}
+
+#seguir a{
+	color:white;
+}
+
+#titulo,#titulos_sabores,#texto_sabores,#seguir{
+	text-align:justify;
+	font-family:"tahoma","geneva";
+}
+
+.noticias{
+	padding:1.1%;
+	margin-top:1.1%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	text-align: center;
+	/*width:100%;  /*--tambien lo quito para que el section pueda estar en el medio*/
+	height:50%;
+	position: relative;
+	border: 3px solid #006799;
+	border-radius: 7px;
+	overflow:hidden; /* ya no es necesario porque tengo controlado bien el contenido al 100%*/
+	background:white;
+}
+
+.subtitulos{
+	color:#999999;
+	text-align:justify;
+	font-family:"tahoma","geneva";
+	font-size:16px;
+	font-weight:500;
+	padding-left:2%;
+	margin-top:15px;
+	margin-bottom:0px;
+
+}
+
+.titulares{
+	text-align:justify;
+	font-family:"tahoma","geneva";
+	font-size:45px;
+	font-weight:900;
+	padding-left:2%;
+	margin:0px;
+}
+
+.noticias .foto_nocicias{
+	width:40%;
+	height:50%;
+	position:absolute;
+	padding:1% 1% 1% 1%;
+	border: 3px solid #006799;
+	margin-left:-47%;
+	margin-top:2%;
+}
+
+.contenido_noticias{
+	text-align:justify;
+	font-family:'';
+	font-size:20px;
+	line-height:1.5;
+	width:50%;
+	height:40%;
+	margin-left:48%;
+}
+
+
+.tabla_servicio{
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#999;
+	margin-left:15%;
+}
+
+.tabla_servicio td{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	padding:12px 20px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#999;
+	color:#444;
+	background-color:#F7FDFA;
+
+}
+
+.tabla_servicio th{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	padding:12px 20px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#999;
+	color:#fff;
+	background-color:#26ADE4;
+}
+
+.tabla_servicio .titulo_tabla{
+	font-weight:bold;
+	font-size:26px;
+	font-family:Arial, Helvetica, sans-serif !important;
+	color:#efefef;
+	text-align:center
+}
+
+.tabla_servicio .fila-par{
+	background-color:#D2E4FC;
+}
+
+.tabla_servicio .titulo_columna{
+	background-color:#D2E4FC;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif !important;
+}
+
+.tabla_servicio .fila_impar{
+	background-color:#efefef;
+}
+
+/*--------------------------------------------------------------------*/
+aside{
+	background:rgba(255,255,255,.2);		
+	position:relative;
+	width: 24.5%;
+	height: 800px;
+	margin-top:1%;
+	margin-left:71%;
+}
+
+.titulo_busqueda{
+	background: rgba(0,102,153,1);
+	background: -moz-linear-gradient(top, rgba(0,102,153,1) 0%, rgba(156,199,230,1) 1%, rgba(0,102,153,1) 42%, rgba(0,102,153,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,102,153,1)), color-stop(1%, rgba(156,199,230,1)), color-stop(42%, 		rgba(0,102,153,1)), color-stop(100%, rgba(0,102,153,1)));
+	background: -webkit-linear-gradient(top, rgba(0,102,153,1) 0%, rgba(156,199,230,1) 1%, rgba(0,102,153,1) 42%, rgba(0,102,153,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,102,153,1) 0%, rgba(156,199,230,1) 1%, rgba(0,102,153,1) 42%, rgba(0,102,153,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,102,153,1) 0%, rgba(156,199,230,1) 1%, rgba(0,102,153,1) 42%, rgba(0,102,153,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,102,153,1) 0%, rgba(156,199,230,1) 1%, rgba(0,102,153,1) 42%, rgba(0,102,153,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006699', endColorstr='#006699', GradientType=0 );
+	/*background:#006799;*/
+	/*width:100%;*/
+	height:5%;
+	padding-left:15%;
+	padding-top:5%;
+	position:relative;
+	color:white;
+}
+
+.titulo_busqueda .lupita{
+	width:17%;
+	height:80%;
+	position:absolute;
+	top:10%;
+	left:1.5%;
+}
+
+.cuerpo_busqueda{
+	/*background:#9999cc;*/
+	background:rgba(255,255,255,.4);
+	width:100%;
+	/*height:25%;*/
+}
+
+#busca{
+	width:50%;
+	height:35px;
+	border-radius: 9px;
+}
+
+#boton_busca{
+	width:30%;
+	height:40px;
+	border-radius: 9px;
+}
+
+#form_busca{
+	padding-top:10%;
+	padding-left:15%;
+	padding-bottom:10%;
+}
+
+.publicidad{
+	background:rgba(255,255,255,.4);
+	width:100%;
+	height:5%;
+}
+
+.publicidad .titulo_publicidad{
+	background:#666666;
+	height:40%;
+	color:white;
+	padding-top:1%;
+	padding-left:3%;
+	font-family:monospace;
+}
+
+.suscribete{
+	background:white;
+	/*background:#006799;*/
+	/*width:100%;*/
+	height:6%;
+	position:relative;
+	margin-top:5%;
+	color:white;
+}
+
+.cuerpo_suscribete{
+	
+	background:rgba(255,255,255,.4);
+	width:100%;
+	height:18%;
+	margin-bottom:5%;
+}
+
+#titulo_suscribete{
+	color:black;
+	font-size:170%;
+	font-weight:900;
+	text-align:center;
+	font-family:"tahoma","geneva";
+	padding-top:3%;
+}
+
+#mixology{
+	color:#006799;
+}
+
+.cuerpo_suscribete ul.botones{  /*las tiras*/
+	margin:1px;
+	padding:0 0 0 1px;
+	height:58px;
+
+}
+
+ul{
+	list-style:none;
+	/*display:block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-star: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;*/
+}
+
+ul li{
+	list-style:none; /*quitamos las viñetas*/
+}
+
+ul.botones li{
+	float:left; /* subimos la lista!!*/
+	width:55px;
+	height:58px;
+	margin:0px;
+	padding:4px;
+	text-indent:-10000px;/*desaparecemos el texto*/
+	/*background:yellow;*/ /*para poder ver la lista*/
+}
+ul.botones li.facebook{
+	background:url(image/facebook-like.png) no-repeat 0 0; 
+	width:55px!important;
+}
+
+ul.botones li.twitter{
+	background:url(image/twitter2.png) no-repeat 0 0; 
+}
+
+ul.botones li.rss{
+	background:url(image/rss.png) no-repeat 0 0; 
+}
+
+ul.botones li.pinterest{
+	background:url(image/pinterest.png) no-repeat 0 0; 
+}
+
+ul.botones li.gplus{
+	background:url(image/gplus.png) no-repeat 0 0; 
+	width:55px!important;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+ul.botones li.blogger{
+	background:url(image/blogger.png) no-repeat 0 0; 
+	/*width:55px!important;*/
+}
+
+ul.botones li.dribble{
+	background:url(image/dribble.png) no-repeat 0 0; 
+}
+
+ul.botones li.stumble{
+	background:url(image/stumble.png) no-repeat 0 0; 
+}
+
+ul.botones li.qik{
+	background:url(image/qik.png) no-repeat 0 0; 
+}
+
+ul.botones li.instagram{
+	background:url(image/instagram.png) no-repeat 0 0; 
+	/*width:55px!important;*/
+}
+
+/*--------------------------------------------------------------------*/
+footer{
+	background:rgba(0,0,0,.5);
+	
+	width: 90%;
+	height: 20%;
+	margin-top: 1%;
+	margin-left:4.5%;
+	margin-bottom:2%;
+	/*margin: 0% 3.8% 0% 3.8%;*/
+	position: absolute;
+}
+
+.cc{
+	background:rgba(255,255,255,.4);
+	opacity:0.8;
+	width:15%;
+	height:70%;
+	border: 1px solid black;
+	border-radius:15px;
+	padding: 1%;
+	margin: 0.5% 2% 2% 82%;
+	text-align: center;
+}
+
+#copy{
+	width: 80%;
+}
+
+#linkcopy{
+	padding-top: 0px;
+	margin: 0px;
+	color:#101c29;
+	margin:0px;
+	
+}
