@@ -1,0 +1,703 @@
+/*-------------------------------------------------------------------------------*/
+
+body{
+	background: rgba(4,41,69,1);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+h1{
+	text-align: center;
+}
+
+*{font-family: sans-serif;}
+
+/*--------------------------------------------------------------------------------*/
+
+header{
+	background-image: url("../image/logomixo.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*width: 70%; si le doy la medida no me centra segun el margin--*/
+	height: 350px;
+	margin:2% 4.5% 0% ;
+	position:relative;
+}
+
+nav{
+	background:rgba(255,255,255,.5);
+	width:100%;
+	height:12%;
+	position:absolute;
+	bottom:0%; /*lo ubicamos en parte inferior del header*/
+	
+}  
+
+	#menu,#menu ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+		position:absolute;
+	}
+
+	#menu {
+		height:100%;
+		padding-left:34.2%;
+		overflow:hidden;
+	}
+
+	#menu li {
+		float:left;
+		position:relative;
+		z-index:10;
+	}
+
+	#menu li a {
+		background: no-repeat center top;
+		background-image: url("../image/banner.png");
+		color:white; /*---color letras*/
+		display:block;  /*--inline o block--*/
+		float:left;
+		font-size:14px;
+		height:100%;
+		line-height:40px;
+		padding:0 10px;
+		position:relative;
+		text-decoration:none;
+		z-index:20;
+	}
+
+	#menu li:first-child a {
+		background:url("../image/banner.png") no-repeat left top;
+		padding-left:40px;
+	}
+
+	#menu li ul li:first-child a {
+		background-image:none;
+		padding-left:10px;
+	}
+
+	#menu li.pad {
+		background:url("../image/banner.png") no-repeat right top;
+		display:block;
+		height:51px;
+		width:45px;
+	}
+
+	#menu ul {
+		background:#663399; /*el color de las ventanass que salen*/
+		height:58px; /*podria ir AUTO para que se controle segun el contenido*/
+ 		padding:10px 0;
+		position:absolute;
+		top:-115px;
+		width:180px;
+		z-index:1;
+	 
+	 	border-radius:8px;
+	 	transition:0.8s ease-in-out; /*la transicion es lente cuando sale y entra por IN-OUT*/
+	 	box-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+	}
+
+	#menu ul li { 
+		width:180px;
+	}
+
+	#menu ul li a { /*el ancho de los submenus*/
+		background:transparent;
+		height:20px;
+		line-height:20px;
+		width:160px;
+	}
+
+	#menu:hover {  /*la distancia hasta donde puede salir*/
+		height:200px;
+	}
+
+	#menu li:hover ul {
+	  	transform: translate(0,161px); 
+	}
+
+	#menu a:hover,#nav li:hover > a {
+		color:#3399cc;  /*el color de la letra cuando paso sobre el*/
+	}
+
+/*--------------------------------------------------------------------*/
+section{
+	background:rgba(255,255,255,.2);
+	width: 65%;
+	height: 800px;
+	margin-top: 1%;
+	margin-left:4.5%;
+	margin-bottom:2%;
+	position: absolute;
+}
+
+.section_curricula{
+	height: 1100px;
+}
+
+.conocenos{
+	background: #ffffff;
+	opacity:0.7;
+	padding:7%;
+	padding-bottom: 14%;
+	margin-top:2.5%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	text-align: justify;
+	line-height:1.5;
+	height:65%;
+	position: relative;
+	border: 3px solid #006799;
+	border-radius: 7px;
+	overflow:hidden; /* ya no es necesario porque tengo controlado bien el contenido al 100%*/
+}
+
+.cartelera{
+	padding:1.1%;
+	margin-top:2.5%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	text-align: center;
+	height:35%;
+	position: relative;
+	border: 3px solid #006799;
+	border-radius: 7px;
+	overflow:hidden; /* ya no es necesario porque tengo controlado bien el contenido al 100%*/
+}
+
+.cartelera .img_cartelera{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+.cartelera .fantasma{
+	color:white;
+	background:rgba(0,0,0,.8);
+	width:50%;
+	height:94%;
+	top:3%;
+	right:1.2%;
+	position:absolute;
+}
+
+.cartelera .fantasma #titulo{
+	background:rgba(0,0,10,250);
+	color:#999999;
+	width:75%;
+	font-size:140%;
+	font-weight:900;
+	padding-top:1%;
+	padding-left:9%;
+	padding-bottom:1%;
+}	
+
+.cartelera .fantasma #titulos_sabores{
+	font-size:200%;
+	font-weight:900;
+	padding-left:9%;
+	margin-top:-2%;
+}
+
+.cartelera .fantasma #texto_sabores{
+	font-size:109%;
+	padding-left:9%;
+	margin-top:-3%;
+}
+
+.cartelera .fantasma #seguir{
+	font-size:109%;
+	font-weight:700;
+	padding-left:60%;
+}
+
+#seguir a{
+	color:white;
+}
+
+
+#titulo,#titulos_sabores,#texto_sabores,#seguir{
+	text-align:justify;
+	font-family:"tahoma","geneva";
+}
+
+.noticias{
+	padding:1.1%;
+	margin:2% 2.5% 0%;
+	text-align: center;
+	height:50%;
+	position: relative;
+	border: 3px solid #006799;
+	border-radius: 7px;
+	background:white;
+}
+
+.noticias .subtitulos,.titulares,.contenido_noticias{
+	text-align:justify;
+}
+
+.noticias .subtitulos{
+	color:#999999;
+	font-size:14px;
+	font-weight:500;
+	padding-left:2%;
+	margin-top:15px;
+	margin-bottom:0px;
+
+}
+
+.noticias .titulares{
+	font-size:35px;
+	font-weight:600;
+	padding-left:2%;
+	margin:0px;
+}
+
+.noticias .foto_nocicias{
+	width:40%;
+	height:50%;
+	position:absolute;
+	padding:1% 1% 1% 1%;
+	border: 3px solid #006799;
+	margin-left:-47%;
+	margin-top:2%;
+}
+
+.noticias .contenido_noticias{
+	font-size:18px;
+	line-height:1.5;
+	width:50%;
+	height:40%;
+	margin-left:48%;
+}
+
+.curricula{
+	background:#ffffff;
+	border: 3px solid #006799;
+	width:80%;
+	height:83%;
+	padding:5%;
+	margin:5%;
+	text-align: justify;
+	line-height:2;
+
+}
+
+.tabla_curricula{
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color:#999;
+	margin:0%;
+	text-align: left;
+	line-height:1.5;
+}
+
+.tabla_curricula td{
+	font-size:14px;
+	padding:5px 10px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal; /*el comportamiento de la rotura de linea. normal es por defaul*/
+	border-color:#999;
+	color:#444;
+	background-color:#F7FDFA;
+}
+
+.tabla_curricula th{
+	font-size:14px;
+	font-weight:normal;
+	padding:12px 20px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+	border-color:#999;
+	color:#fff;
+	background-color:#26ADE4;
+}
+
+.tabla_curricula .titulo_tabla{
+	font-weight:bold;
+	font-size:26px;
+	color:#efefef;
+	text-align:center
+}
+
+.tabla_curricula .fila-par{
+	background-color:#D2E4FC;
+}
+
+.tabla_curricula .titulo_columna{
+	background-color:#D2E4FC;
+	font-weight:bold;
+}
+
+.tabla_curricula .fila_impar{
+	background-color:#efefef;
+}
+
+.curricula .tabla_curricula ul li{
+	list-style:square;
+}
+
+.servicios{
+	background:#ffffff;
+	opacity:0.9;
+	border: 3px solid #006799;
+	width:80%;
+	height:65%;
+	padding:5%;
+	margin:5%;
+	text-align: justify;
+	line-height:2;
+}
+
+
+.servicios ul{ 
+	list-style-image: url("../image/punto.png")
+}
+
+.primera{
+	position: absolute;
+	margin: 0% 3%;
+
+}
+
+.segunda{
+	position: absolute;
+	margin-top:0%;
+	margin-left: 42%;
+}
+
+	.formulario h2, .formulario label {
+		font-family: sans-serif;
+	}
+
+	.letritas, .datos_requeridos {
+		font-size: 14px; 
+	}
+	.formulario ul {
+		width: 80%;
+		list-style-type: none;
+		list-style-position: outside;
+		margin:10%;
+		padding:0%; 
+	}
+	.formulario li {
+		padding: 2%;
+		border-bottom: 1px solid rgba(255,255,255,.3) ;
+		position: relative; 
+	}
+	.formulario li:first-child, .formulario li:last-child {
+		border-bottom: 5px solid rgba(4,41,69,1); 
+	}
+	
+	.formulario h2 {
+		margin: 0%;
+		display: inline;
+	}
+	.datos_requeridos {
+		color: #57100a;
+		margin: 5px 0 0 0;
+		display: inline; 
+		float: right; 
+	}
+	.formulario label {
+		width: 150px;
+		margin-top: 0px;
+		display: inline-block;
+		float: left;
+		padding: 2px; 
+	}
+	.formulario input { 
+		height: 20px; 
+		width: 220px; 
+		padding: 5px 8px; 
+	}
+	.formulario textarea { 
+		padding: 8px; 
+		width: 300px; 
+	}
+	.formulario button { 
+		margin-left: 40%;
+	}
+	
+	.formulario input, .formulario textarea {
+		border: 1px solid #57100a; 
+		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset; 
+		border-radius: 2px; 
+		padding-right: 30px; 
+		transition: padding .25s; 
+	}
+	.formulario input:focus, .formulario textarea:focus {
+		background: blue;
+		border: 1px solid #555;
+		box-shadow: 0 0 3px #aaa;
+		padding-right: 70px; 
+	}
+	
+	.formulario input:required:valid, .formulario textarea:required:valid { 
+		background: #89bde0 url("../image/valid.png") no-repeat 98% center; 
+		box-shadow: 0 0 5px #d45252; 
+		border-color: #28921f; 
+	}
+
+	.formulario input:focus:invalid, .formulario textarea:focus:invalid { 
+		background: #384744 url("../image/invalid.png") no-repeat 98% center; 
+		box-shadow: 0 0 5px #d45252; /*sombra*/
+		border-color: #b03535; 
+	}
+
+	.letritas {
+		background: #f01a1a;
+		border-radius: 3px;
+		color: white;
+		margin-left: 8px;
+		padding: 1px 6px;
+		z-index: 999;
+		position: absolute;
+		display: none;
+	}
+
+	.letritas::before {
+		content: "\25C0"; /*el cosito tipo play*/
+		color: #f01a1a;
+		position: absolute;
+		top: 1px;
+		left: -6px; 
+	}
+
+	.formulario input:focus + .letritas {
+		display: inline; 
+	} 
+	.formulario input:required:valid + .letritas {
+		background: #28921f;
+	} 
+	.formulario input:required:valid + .letritas::before { 
+		color: #28921f; 
+	}
+
+	button.submit {
+		background: rgba(11,39,82,1);
+		border: 1px solid black;
+		color: white;
+		font-weight: bold;
+		padding: 6px 20px;
+		text-align: center;
+		
+	}
+
+	button.submit:hover { 
+		opacity: .85; 
+		cursor: pointer; 
+	} 
+
+	.encontruccion{
+		width: 100%;
+		height: 70%;
+		margin-top:5%;
+	}
+
+/*--------------------------------------------------------------------*/
+aside{
+	background:rgba(255,255,255,.2);		
+	position:relative;
+	width: 24.5%;
+	height: 800px;
+	margin-top:1%;
+	margin-left:71%;
+}
+
+.aside_curricula{
+	height: 1100px;
+}
+
+	.busqueda{
+		background: rgba(0,102,153,1);
+		height:5%;
+		padding-left:20%;
+		padding-top:5%;
+		position:relative;
+	}
+
+	.busqueda #titulo_busqueda{
+		position: absolute;
+		margin-top: -1%;
+		color:white;
+		font-family:tahoma;
+		font-size:200%;
+		font-weight:900;
+	}
+
+	.busqueda .lupita{
+		width:17%;
+		height:80%;
+		position:absolute;
+		top:10%;
+		left:1.5%;
+	}
+
+	.cuerpo_busqueda{
+		background:rgba(255,255,255,.4);
+		width:100%;
+	}
+
+	.cuerpo_busqueda #form_busca{
+		padding-top:10%;
+		padding-left:15%;
+		padding-bottom:10%;
+	}
+
+	.cuerpo_busqueda #form_busca #busca{
+		width:50%;
+		height:35px;
+		border-radius: 9px;
+	}
+
+	.cuerpo_busqueda #form_busca #boton_busca{
+		width:30%;
+		height:40px;
+		border-radius: 9px;
+	}
+
+	.publicidad{
+		background:rgba(255,255,255,.4);
+		width:100%;
+		height:5%;
+	}
+
+	.publicidad #titulo_publicidad{
+		background:#666666;
+		height:40%;
+		color:white;
+		padding-top:1%;
+		padding-left:3%;
+		font-family:'monospace';
+		font-size: 12px;
+	}
+
+	.suscribete{
+		background:white;
+		height:6%;
+		position:relative;
+		margin-top:7%;
+	}
+
+	#titulo_suscribete{
+		color:black;
+		font-size:170%;
+		font-weight:900;
+		text-align:center;
+		padding-top:3%;
+	}
+
+	#mixology{
+		color:#006799;
+	}
+
+	.cuerpo_suscribete{
+		background:rgba(255,255,255,.4);
+		width:100%;
+		height:18%;
+	}
+
+	.cuerpo_suscribete ul.botones{  /*las tiras*/
+		margin:1px;
+		padding:0 0 0 1px;
+		height:58px;
+	}
+
+	.cuerpo_suscribete ul.botones{
+		list-style:none;
+	}
+
+	ul.botones li{
+		list-style:none;
+		float:left; /* subimos la lista!!*/
+		width:55px;
+		height:58px;
+		margin:0px;
+		padding:4px;
+		text-indent:-10000px;/*desaparecemos el texto*/
+	}
+
+	ul.botones li.facebook{
+		background:url("../image/facebook-like.png") no-repeat 0 0; 
+		width:55px;
+	}
+
+	ul.botones li.twitter{
+		background:url("../image/twitter2.png") no-repeat 0 0; 
+	}
+
+	ul.botones li.rss{
+		background:url("../image/rss.png") no-repeat 0 0; 
+	}
+
+	ul.botones li.pinterest{
+		background:url("../image/pinterest.png") no-repeat 0 0; 
+	}
+
+	ul.botones li.gplus{
+		background:url("../image/gplus.png") no-repeat 0 0; 
+		width:55px;
+	}
+
+	li {
+		display: list-item;
+	}
+
+	ul.botones li.blogger{
+		background:url("../image/blogger.png") no-repeat 0 0; 
+		}
+
+	ul.botones li.dribble{
+		background:url("../image/dribble.png") no-repeat 0 0; 
+	}
+
+	ul.botones li.stumble{
+		background:url("../image/stumble.png") no-repeat 0 0; 
+	}
+
+	ul.botones li.qik{
+		background:url("../image/qik.png") no-repeat 0 0; 
+	}
+
+	ul.botones li.instagram{
+		background:url("../image/instagram.png") no-repeat 0 0; 
+	}
+
+/*--------------------------------------------------------------------*/
+footer{
+	background:rgba(0,0,0,.5);
+	width: 90%;
+	height: 20%;
+	margin:1% 4.5% 2%;
+	position: absolute;
+}
+
+	.cc{
+		background:rgba(255,255,255,.4);
+		opacity:0.8;
+		width:15%;
+		height:70%;
+		border: 1px solid black;
+		border-radius:15px;
+		padding: 1%;
+		margin: 0.5% 2% 2% 82%;
+		text-align: center;
+	}
+
+	#copy{
+		width: 80%;
+	}
+
+	#linkcopy{
+		padding-top: 0px;
+		margin: 0px;
+		color:#101c29;
+		margin:0px;
+	}
